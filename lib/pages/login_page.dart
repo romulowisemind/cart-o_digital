@@ -16,15 +16,13 @@ class LoginPage extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const CartaoPage(),
+            builder: (context) => CartaoPage(),
           ),
         );
       } else {
         print('Usuario Incorreto');
       }
     }
-
-    ;
 
     return Scaffold(
       body: SingleChildScrollView(

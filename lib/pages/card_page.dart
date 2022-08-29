@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:projetin/pages/card_controller.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 
 class CartaoPage extends StatelessWidget {
   CartaoPage({Key? key}) : super(key: key);
@@ -43,22 +43,31 @@ class CartaoPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              InkWell(
-                  child: Image.asset('assets/images/icons/icone_linkedin.png', width: 20, height: 20,),
-                  onTap: () {cardController.linkedin;},
+              GestureDetector(
+                onTap: () {
+                  cardController.linkedin();
+                },
+                child: Image.asset(
+                  'assets/images/icons/icone_linkedin.png',
+                  width: 20,
+                  height: 20,
                 ),
+              ),
+              //usar estrutura de cima(GestureDetector)
               IconButton(
                 icon: InkWell(
                   child: Image.asset('assets/images/icons/icone_github.png'),
                 ),
                 onPressed: () {},
               ),
+              //usar estrutura de cima
               IconButton(
                 icon: InkWell(
                   child: Image.asset('assets/images/icons/icone_whatsapp.png'),
                 ),
                 onPressed: () {},
               ),
+              //usar estrutura de cima
               IconButton(
                 icon: InkWell(
                   child: Image.asset('assets/images/icons/icone_email.png'),
