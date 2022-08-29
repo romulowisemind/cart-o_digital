@@ -17,7 +17,7 @@ class CartaoPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Cartão Digital',
+          'Cartão Digital ',
         ),
       ),
       body: Column(
