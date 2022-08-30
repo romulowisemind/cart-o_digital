@@ -10,9 +10,9 @@ class LoginPage extends StatelessWidget {
     String login = '';
     String senha = '';
 
-    ValidarUsuario() {
+    validarUsuario() {
       if (login == 'romulocs38@gmail.com' && senha == 'Romulo123') {
-        print('Logado');
+        debugPrint('Logado');
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
           ),
         );
       } else {
-        print('Usuario Incorreto');
+        debugPrint('Usuario Incorreto');
       }
     }
 
@@ -34,7 +34,7 @@ class LoginPage extends StatelessWidget {
               child: Image.asset('assets/images/logo_login.webp'),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
               child: TextField(
                 onChanged: (String email) {
                   login = email;
@@ -42,7 +42,7 @@ class LoginPage extends StatelessWidget {
                 decoration: const InputDecoration(
                   hintText: 'Ex: exemplo@exemplo.com',
                   border: OutlineInputBorder(
-                    borderRadius: const BorderRadius.all(Radius.circular(32)),
+                    borderRadius: BorderRadius.all(Radius.circular(32)),
                   ),
                 ),
               ),
@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
                 decoration: const InputDecoration(
                   hintText: 'Inserir a senha',
                   border: OutlineInputBorder(
-                    borderRadius: const BorderRadius.all(Radius.circular(32)),
+                    borderRadius: BorderRadius.all(Radius.circular(32)),
                   ),
                 ),
               ),
@@ -66,9 +66,9 @@ class LoginPage extends StatelessWidget {
               width: 500,
               child: ElevatedButton(
                 onPressed: () {
-                  ValidarUsuario();
+                  validarUsuario();
                 },
-                child: Text('Login'),
+                child: const Text('Login'),
               ),
             )
           ],

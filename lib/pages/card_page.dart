@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:projetin/pages/card_controller.dart';
 
 class CartaoPage extends StatelessWidget {
@@ -23,7 +22,7 @@ class CartaoPage extends StatelessWidget {
         child: Column(
           children: [
             const Padding(
-              padding: const EdgeInsets.fromLTRB(100, 80, 100, 0),
+              padding: EdgeInsets.fromLTRB(100, 80, 100, 0),
               child: CircleAvatar(
                 radius: 130.0,
                 backgroundImage: AssetImage('assets/images/image_card_page.jpeg'),
